@@ -1,0 +1,2 @@
+Năm đầu máy ở trường thực hành và thi đều dùng Microsoft Visual C ++ 6.0, nên đa phần là mình code theo Microsoft Visual C ++ 6.0
+Link: https://www.youtube.com/watch?v=GPv8coYl3cE&t=151s
