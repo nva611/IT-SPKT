@@ -1,0 +1,10 @@
+D:\SPKT\HK3\OOP\TestString\TestString\obj\Debug\TestString.csproj.AssemblyReference.cache
+D:\SPKT\HK3\OOP\TestString\TestString\obj\Debug\TestString.csproj.CoreCompileInputs.cache
+D:\SPKT\HK3\OOP\TestString\TestString\bin\Debug\TestString.exe.config
+D:\SPKT\HK3\OOP\TestString\TestString\bin\Debug\TestString.exe
+D:\SPKT\HK3\OOP\TestString\TestString\bin\Debug\TestString.pdb
+D:\SPKT\HK3\OOP\TestString\TestString\bin\Debug\MyClassLibString.dll
+D:\SPKT\HK3\OOP\TestString\TestString\bin\Debug\MyClassLibString.pdb
+D:\SPKT\HK3\OOP\TestString\TestString\obj\Debug\TestString.csproj.CopyComplete
+D:\SPKT\HK3\OOP\TestString\TestString\obj\Debug\TestString.exe
+D:\SPKT\HK3\OOP\TestString\TestString\obj\Debug\TestString.pdb

@@ -1,0 +1,6 @@
+D:\SPKT\HK3\OOP\MyClassLibString\MyClassLibString\bin\Debug\MyClassLibString.dll
+D:\SPKT\HK3\OOP\MyClassLibString\MyClassLibString\bin\Debug\MyClassLibString.pdb
+D:\SPKT\HK3\OOP\MyClassLibString\MyClassLibString\obj\Debug\MyClassLibString.csproj.AssemblyReference.cache
+D:\SPKT\HK3\OOP\MyClassLibString\MyClassLibString\obj\Debug\MyClassLibString.csproj.CoreCompileInputs.cache
+D:\SPKT\HK3\OOP\MyClassLibString\MyClassLibString\obj\Debug\MyClassLibString.dll
+D:\SPKT\HK3\OOP\MyClassLibString\MyClassLibString\obj\Debug\MyClassLibString.pdb

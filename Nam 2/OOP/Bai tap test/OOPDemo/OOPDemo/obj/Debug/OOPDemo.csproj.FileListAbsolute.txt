@@ -1,0 +1,7 @@
+D:\SPKT\HK3\OOP\OOPDemo\OOPDemo\obj\Debug\OOPDemo.csproj.AssemblyReference.cache
+D:\SPKT\HK3\OOP\OOPDemo\OOPDemo\obj\Debug\OOPDemo.csproj.CoreCompileInputs.cache
+D:\SPKT\HK3\OOP\OOPDemo\OOPDemo\bin\Debug\OOPDemo.exe.config
+D:\SPKT\HK3\OOP\OOPDemo\OOPDemo\bin\Debug\OOPDemo.exe
+D:\SPKT\HK3\OOP\OOPDemo\OOPDemo\bin\Debug\OOPDemo.pdb
+D:\SPKT\HK3\OOP\OOPDemo\OOPDemo\obj\Debug\OOPDemo.exe
+D:\SPKT\HK3\OOP\OOPDemo\OOPDemo\obj\Debug\OOPDemo.pdb
