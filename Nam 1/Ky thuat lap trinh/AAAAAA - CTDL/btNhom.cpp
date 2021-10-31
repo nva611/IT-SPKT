@@ -5,8 +5,8 @@
 struct DauSach
 {
 	char maSSach[7];
-	char tenSach[3];
-	char tacGia[3];
+	char tenSach[30];
+	char tacGia[30];
 	int namXB;
 	int soLuong;
 };
@@ -33,13 +33,13 @@ int main()
 	init(T);
 	
 	DauSach s1;
-	s1.maSSach = "mss001"; s1.namXB = 2020; s1.soLuong = 120; s1.tacGia = "A1"; s1.tenSach = "S1";
+	strcpy(s1.maSSach, "mss001"); s1.namXB = 2020; s1.soLuong = 120; strcpy(s1.tacGia, "A1"); strcpy(s1.tenSach, "S1");
 	DauSach s3;
-	s3.maSSach = "mss003"; s3.namXB = 2023; s3.soLuong = 123; s3.tacGia = "A3"; s3.tenSach = "S3";
+	strcpy(s3.maSSach, "mss003"); s3.namXB = 2023; s3.soLuong = 123; strcpy(s3.tacGia, "A3"); strcpy(s3.tenSach, "S3");
 	DauSach s4;
-	s4.maSSach = "mss004"; s4.namXB = 2420; s4.soLuong = 140; s4.tacGia = "A4"; s4.tenSach = "S4";
+	strcpy(s4.maSSach, "mss004"); s4.namXB = 2420; s4.soLuong = 140; strcpy(s4.tacGia, "A4"); strcpy(s4.tenSach, "S4");
 	DauSach s2;
-	s2.maSSach = "mss002"; s2.namXB = 2220; s2.soLuong = 122; s2.tacGia = "A2"; s1.tenSach = "S2";
+	strcpy(s2.maSSach, "mss002"); s2.namXB = 2220; s2.soLuong = 122; strcpy(s2.tacGia, "A2"); strcpy(s2.tenSach, "S3");
 	
 	themDauSachVaoBST(&T, s1);
 	themDauSachVaoBST(&T, s3);
@@ -50,17 +50,18 @@ int main()
 	
 	return 0;
 }
+
 void themDauSachVaoBST(BST** T, DauSach data)
 {
 	BST* x, * y, * z;
-	z = (BST*)malloc(sizeof BST);
+	z = (BST*)malloc(sizeof(BST));
 	z->data = data; z->left = NULL; z->right = NULL;
 	y = NULL;
 	x = *T;
 	while (x != NULL)
 	{
 		y = x;
-		if (soSanhMaSSach(z->data.maSSach, x->data.maSSach) < 0)
+		if (soSanhMaSSach(z->data, x->data) < 0)
 			x = x->left;
 		else
 			x = x->right;
@@ -68,7 +69,7 @@ void themDauSachVaoBST(BST** T, DauSach data)
 	z->parent = y;
 	if (y == NULL) // Tree is empty
 		*T = z;
-	else if (soSanhMaSSach(z->data.maSSach, y->data.maSSach) < 0)
+	else if (soSanhMaSSach(z->data, y->data) < 0)
 		y->left = z;
 	else
 		y->right = z;
