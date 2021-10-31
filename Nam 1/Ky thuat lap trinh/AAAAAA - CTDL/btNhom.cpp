@@ -4,51 +4,63 @@
 
 struct DauSach
 {
-	char maSSach[6];
-	char tenSach[30];
-	char tacGia[40];
+	char maSSach[7];
+	char tenSach[3];
+	char tacGia[3];
 	int namXB;
 	int soLuong;
 };
 
 struct BST
 {
-	DauSach s;
+	DauSach data;
 	BST *left;
 	BST *right;
 	BST *parent;
 };
+
+
+void themDauSachVaoBST(BST** T, DauSach data);
+void duyetGiua(BST *x);
+void xuatThongTinDS(DauSach data);
+int soSanhMaSSach(DauSach a, DauSach b);
+void init(BST *&T);
+
 
 int main()
 {
 	BST *T;
 	init(T);
 	
+	DauSach s1;
+	s1.maSSach = "mss001"; s1.namXB = 2020; s1.soLuong = 120; s1.tacGia = "A1"; s1.tenSach = "S1";
+	DauSach s3;
+	s3.maSSach = "mss003"; s3.namXB = 2023; s3.soLuong = 123; s3.tacGia = "A3"; s3.tenSach = "S3";
+	DauSach s4;
+	s4.maSSach = "mss004"; s4.namXB = 2420; s4.soLuong = 140; s4.tacGia = "A4"; s4.tenSach = "S4";
+	DauSach s2;
+	s2.maSSach = "mss002"; s2.namXB = 2220; s2.soLuong = 122; s2.tacGia = "A2"; s1.tenSach = "S2";
 	
+	themDauSachVaoBST(&T, s1);
+	themDauSachVaoBST(&T, s3);
+	themDauSachVaoBST(&T, s4);
+	themDauSachVaoBST(&T, s2);
 	
+	duyetGiua(T);
 	
 	return 0;
 }
-void themDauSach(BST *T)
+void themDauSachVaoBST(BST** T, DauSach data)
 {
-	
-}
-void themDauSachVaoBST(BST** T, DauSach s)
-{
-	if (TREE_SEARCH(*T, s) != NULL)
-	{
-		printf("Node da ton tai!!!");
-		return;
-	}
 	BST* x, * y, * z;
 	z = (BST*)malloc(sizeof BST);
-	z->key = value; z->left = NULL; z->right = NULL;
+	z->data = data; z->left = NULL; z->right = NULL;
 	y = NULL;
 	x = *T;
 	while (x != NULL)
 	{
 		y = x;
-		if (z->key < x->key)
+		if (soSanhMaSSach(z->data.maSSach, x->data.maSSach) < 0)
 			x = x->left;
 		else
 			x = x->right;
@@ -56,46 +68,27 @@ void themDauSachVaoBST(BST** T, DauSach s)
 	z->parent = y;
 	if (y == NULL) // Tree is empty
 		*T = z;
-	else if (z->key < y->key)
+	else if (soSanhMaSSach(z->data.maSSach, y->data.maSSach) < 0)
 		y->left = z;
 	else
 		y->right = z;
 }
-
-int kiemTraTrung(BST *T, DauSach s)
+void duyetGiua(BST *x)
 {
-	BST *p;
-	p = T;
-	if (p == NULL)
-		return 0;
-	else
+	if (x != NULL) 
 	{
-		if (soSanhMaSSach(s->maSSach, T->s.maSSach) < 0)
-			kiemTraTrung(p->left, x);
-		else if (soSanhMaSSach(s->maSSach, T->s.maSSach) > 0)
-			isExist(p->right, x);
-		else
-			return p;
-	}
-	
-	while (T != NULL && T->key != s.maSSach)
-	{
-		if (soSanhMaSSach(s->maSSach, T->s.maSSach) < 0)
-			T = T->left;
-		else if
-			T = T->right;
+		duyetGiua(x->left);
+		xuatThongTinDS(x->data);
+		duyetGiua(x->right);
 	}
 }
-BST* TREE_SEARCH(BST* T, int k)
+void xuatThongTinDS(DauSach data)
 {
-	while (T != NULL && T->key != k)
-	{
-		if (k < T->key)
-			T = T->left;
-		else
-			T = T->right;
-	}
-	return T;
+	printf("Ma sach: %s\n", data.maSSach);
+	printf("Ten sach: %s\n", data.tenSach);
+	printf("Tac gia: %s\n", data.tacGia);
+	printf("Nam xuat ban: %d\n", data.namXB);
+	printf("SL: %d\n", data.soLuong);
 }
 int soSanhMaSSach(DauSach a, DauSach b)
 {
